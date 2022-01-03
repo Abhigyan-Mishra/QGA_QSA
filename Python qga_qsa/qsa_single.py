@@ -8,7 +8,7 @@ import math
 
 
 
-filename = 'wine'
+filename = 'lymphography'
 data = pd.read_csv('datasets/'+ str(filename) + '.csv')
 qubo = pd.read_csv('qubos/'+ str(filename) + '_qubo.csv')
 qubo = qubo.values[:,1:(qubo.shape[0]+1)]
@@ -39,7 +39,7 @@ start_time = time.time()
 while sys_prob_log.min() < 99.5 and T>1:
     iteration_count.append(iteration)
     print('############################################################# Iteration No: {}'.format(iteration))
-    print('Current temperature is---------------------------------------------------------------------',T)
+    print('Current Temperature is------------------------------------------:>',T)
     fit_current = [Measure_Eval2(system,qubo) for system in current_systems]
     rotated_systems = [Rotate(T,system) for system in current_systems]
     fit_rotated = [Measure_Eval2(system,qubo) for system in rotated_systems]    
@@ -63,17 +63,17 @@ while sys_prob_log.min() < 99.5 and T>1:
 
     sys_prob_log = np.array([Final_Measure(system)[1] for system in migrated_systems])
     all_sys_prob_log.append(sys_prob_log)
-    print('\n\nSystem probabilities {} #######\n'.format(sys_prob_log))
+    print('\n\n System Probabilities {} #######\n'.format(sys_prob_log))
 
 
 
 
     #################################################################
-    print('fit Current:',fit_current)
-    print('fit  Rotate:',fit_rotated)
-    print('fit Replace:',fit_replaced)
-    print('fit Mutated:',fit_mutated)
-    print('fit Migrate:',fit_migrated)
+    print('Fit Current:',fit_current)
+    print('Fit  Rotate:',fit_rotated)
+    print('Fit Replace:',fit_replaced)
+    print('Fit Mutated:',fit_mutated)
+    print('Fit Migrate:',fit_migrated)
 
     fitness_detail.append(fit_current)
     fitness_detail.append(fit_rotated)

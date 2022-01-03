@@ -84,13 +84,3 @@ def prediction(dataset):
     classifier.fit(X_train, Y_train)
     Y_pred = classifier.predict(X_test)
     return accuracy_score(Y_test,Y_pred)*100
-
-
-
-
-
-
-
-
-
-
