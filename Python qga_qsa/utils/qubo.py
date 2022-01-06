@@ -1,7 +1,6 @@
 import numpy as np
 from pyitlib import discrete_random_variable as drv
 from sklearn.preprocessing import LabelEncoder
-from sklearn import preprocessing
 
 
 

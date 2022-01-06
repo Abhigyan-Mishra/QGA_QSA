@@ -4,7 +4,6 @@ from utils.qubo import *
 from utils.utility import *
 from utils.qga import *
 import time
-import math
 
 
 
