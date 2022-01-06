@@ -2,11 +2,10 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import KBinsDiscretizer
 from sklearn.preprocessing import LabelEncoder
-from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import accuracy_score
 
 
 
